@@ -17,6 +17,8 @@ var commentRoutes    = require("./routes/comments"),
 	indexRoutes       = require("./routes/index");
 
 mongoose.connect('mongodb+srv://suri:ansh@cluster0-k50b5.mongodb.net/test?retryWrites=true&w=majority',{
+	userNewUrlParser: true,
+	useCreateIndex: true
 }).then(() => {
 	console.log('Connected to DB!');
 }).catch(err => {
